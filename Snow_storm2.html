@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style_story.css">
+
+    <title>Story</title>
+
+    <style> 
+        body{
+            background-color: #a5bfdd;
+        }
+
+
+        .button{
+            position: relative;
+            float: right;
+            margin-top: 5%;
+            top:-670px;
+            right:-250px;
+        }
+        
+        div, section, span, ul, li, a{
+    box-sizing: border-box;
+}  
+
+        @media screen and (max-width: 375px){
+            #title{
+                text-align: center;
+                font-size: 30px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .verticle_img{
+                margin-left: 5vw;
+                width: 90vw;
+                height: 50vh;
+            }
+            body{
+                max-height: 812px;
+                width: auto;
+            }
+
+            .story_verticle_text{
+                font-size: 15px;
+                width: 90vw;
+                margin-right:0;
+                margin-left:5vw;
+                text-align: center;
+                float:left;
+                top:0;
+            }
+
+            .button{
+                margin: 90vh 95vw 0px 0px;
+            }
+
+            .middle_verticle{
+                transition: .25s ease;
+                opacity: 0;
+                position: absolute;
+                top: 50vh;
+                width: 200px;
+                margin-left: 25vw;
+                transform: translate(-50%,-200%);
+                -ms-transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
+            .specs{
+                font-size: 10px;
+                padding: 10px 20px;
+            }
+
+           
+    }
+    </style>
+
+    
+    
+</head>
+<body>
+    <h1 id ="title" class = "text6"> Snow Storm</h1>
+
+    <div class = "verticle_container">
+        <img class ="verticle_img" src = "img/2.jpg">
+        <div class ="middle_verticle">
+        <p class="specs">
+            Shutter Speed: 1/30s <br>
+            Focal Length: 18mm <br>
+            Aperture: f1.8 <br>
+          </p>
+        </div>
+    </div>
+    <p class=story_verticle_text> Me and my crew have been anticipating a snow storm to hit New York City, so that we can have a photoshoot on the streets of Manhattan. When that snow storm arrived, we packed our gear and headed towards the city. From afternoon into late night, we took this photo in the middle of the Manhattan street, the fog coming from underground combined with the snow gave this photoa cinematic vibe.</p>
+
+    <a href="index.html"><button class ="button">Go Back</button></a>
+
+</body>
+</html>

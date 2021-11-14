@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style_story.css">
+
+    <title>Story</title>
+
+    <style> 
+        body{
+            background-color: #a7ca8e;
+        }
+
+        @media screen and (max-width: 375px){
+            #title{
+                text-align: center;
+                font-size: 30px;
+                font-family: 'Times New Roman', Times, serif;
+            }
+            
+            .story_text6{
+                font-size: 15px;
+                margin: 10% 10% 10% 10%;
+            }
+                
+            .container:hover .img6{
+                opacity: 0.8;
+                transform: scale(1.05);
+                border: 2px solid rgb(231, 169, 87);
+            }
+
+            .img6{
+                width: 90%;
+                margin: 5%;
+            }
+            .middle{
+                transition: .5s ease;
+                opacity: 0;
+                position: absolute;
+                top: 50vw;
+                left: 50vw;
+                transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                text-align: center;
+            }
+            .specs{
+                background-color: black;
+                font-family: sora, sans-serif;
+                color:white;
+                font-size: 12px;
+                padding: 16px 32px;
+                transition: all 0.35s ease-in-out;
+            }
+            .button{
+                margin-top:15px;
+                margin-left: 30vw;
+                margin-right:0;
+            }
+    }
+    </style>
+
+    
+    
+</head>
+<body>
+    <h1 id ="title" class = "text6"> Autumn Smile</h1>
+
+    <div class = "container">
+        <img class ="img6" src = "img/9.jpg">
+        <div class ="middle">
+        <p class="specs">
+            Shutter Speed: 1/250s <br>
+            Focal Length: 18mm <br>
+            Aperture: f1.8 <br>
+          </p>
+        </div>
+    </div>
+ 
+    <p class=story_text6> I am a big fan of cafe, I find myself to be more focused and productive at a cafe. Therefore I love to find different cafes and visit them whenever I have work to be done without needing a PC next to me. This photo was taken at Morning Cafe, the bright and cozy feeling of Autumn was perfectly highlighed by her gorgeous smile.</p>
+
+    <a href="index.html"><button class ="button">Go Back</button></a>
+</body>
+</html>
