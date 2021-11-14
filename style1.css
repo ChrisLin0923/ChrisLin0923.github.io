@@ -142,7 +142,7 @@ h1{
 /* Photo gallery page 1 */
 
 .container{
-  background-image: linear-gradient(to bottom, rgb(0, 0, 0), #ffffff, #7db0d1);
+  background-image: linear-gradient(to bottom, rgb(0, 0, 0), #ffffff, #98caeb);
   display: flex;
   flex-direction: column;
   justify-content: center;
