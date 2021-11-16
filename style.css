@@ -37,7 +37,16 @@ header{
 #menu li{
   list-style: none;
   display: inline-block;
-  margin: 10px 10px 5px 0px;
+  margin: 10px 10px 5px 0px;  
+}
+
+#menu a{
+  transition: all 0.15s ease-in-out;
+}
+
+#menu a:hover{
+    color:rgb(136, 221, 236);
+    border-bottom: solid rgb(136, 221, 236);
 }
 
 #menu li a{
