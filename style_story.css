@@ -90,7 +90,7 @@ html{
     cursor: move;
     text-align:center;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -147,7 +147,7 @@ button {
     -ms-user-select: none;
     user-select: none;
     width: 10rem;
-    margin: 20px 45% 10vw 45%;
+    margin: 30px 45% 10vw 45%;
   }
   
   button:hover {
