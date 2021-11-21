@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+
+    <script src="script.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,14 +25,19 @@
         scroll-behavior: smooth;
     }
 
-    @media screen and (max-width: 420px){
+    @media screen and (max-width: 450px){
+        .sidebar {padding-top: 15px;}
+        .sidebar a {font-size: 18px;}
+
         p.cover_text{
             top: -0px;
-            margin-top: 20px;
+            padding-top:0;
+            margin-top: 8px;
             margin-bottom: 15px;
             font-size: 20px;
             width: 100vw;
         }
+
         p.cover_text1{
             width: 70vw;
             margin-left:15vw;
@@ -39,8 +47,9 @@
         p.cover_text2{
             font-size: 15px;
             margin-right:0;
-            padding-left: 0;
+            padding-left: 0px;
             padding-right:0;
+            
         }
 
         ul#menu{
@@ -51,17 +60,16 @@
         img.cover_image_mobile{
             width: 100%;
             height: auto;
-            visibility: visible;
             display:flex;
         }
+        .browse_insta{
+            margin-left: 29vw;
+        }
         img.cover_image{
-            visibility: hidden;
             display: none;
         }
 
         .fa {
-            margin-top: 10%;
-            margin-left: 48%;
             margin-bottom: 10px;
             font-size: 20px;
             width: 10px;
@@ -71,25 +79,34 @@
 
     .cover_image_mobile{
         display: none;
-        visibility: hidden;
     }
     
 
 </style>
 
     <section id="home">
-        <header class ="menu">
-            <ul id="menu">
-                <li><a class="current"href="#home">Home</a></li>
-                <li><a class="current"href="#photo">Gallery</a></li>
-                <li><a class="current"href="#contact">About Me</a></li>
-            </ul>
-        </header>
-        
+
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="#home">Home</a>
+            <a href="#photo">Gallery</a>
+            <a href="#contact">About Me</a>
+        </div>
+        <div id="main">
+             <button class="openbtn" onclick="openNav()">☰</button>  
+        </div>
+
+
+      <picture>
+            <source srcset="" media="(min-width: 500px)">
+            <img class = "cover_image" src ="img/cover.jpg"> 
+        </picture>
+
+            <img class = "cover_image_mobile" src ="img/cover_mobile.jpg">
+   
+
          
-       
-         <img class = "cover_image" src ="img/cover.jpg"> 
-         <img class = "cover_image_mobile" src ="img/cover_mobile.jpg">
+   
          <p class = "cover_text" >Programmer || Photographer</p>
          <p class = "cover_text1"> Passionate lover of photography and film-making. Custom keyboards, desk setup, games, and tech accesorries enthusiast residing in New York. </p>
     
@@ -98,10 +115,11 @@
 
 
          <!-- Add font awesome icons -->
-         
-         <a URL = "https://www.instagram.com/focus.on.fire/"; href="https://www.instagram.com/focus.on.fire/" class="fa fa-instagram"></a>
+          <div class = "browse_insta">
+            <a URL = "https://www.instagram.com/focus.on.fire/"; href="https://www.instagram.com/focus.on.fire/" class="fa fa-instagram"></a>
  
-         <p style=" text-align: center;"; class = "cover_text2"> Browse My Portfolio </p>  
+            <p style=" text-align: center;"; class = "cover_text2"> Browse My Portfolio </p> 
+        </div> 
         
 </section>
 

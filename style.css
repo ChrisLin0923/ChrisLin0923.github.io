@@ -1,7 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
 
 
+html {
+  --scrollbarBG: #000000;
+  --thumbBG: #b0d2e4;
+}
+body::-webkit-scrollbar {
+  width: 11px;
+}
 
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
 
 *{
   margin: 0;
@@ -24,37 +39,66 @@ div, section, span, ul, li, a{
 
 /*css reset*/
 
-header{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 3% 3% 1%;
-  align-items: center;
+.sidebar {
+  display:flex;
+  flex-direction: column;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.7);
+  overflow-x: hidden;
+  transition: 0.25s;
+  padding-top: 60px;
+}
+
+
+
+.sidebar a {
+  padding: 8px 8px 8px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+  transition: all 0.25s ease-in-out;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.sidebar a:hover {
+  color: #91d0e4;
+  text-decoration:underline;
+  transform: scale(1.05);
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 36px;
+  margin-left: 30px;
+}
+
+.openbtn {
+  font-size: 25px;
+  cursor: pointer;
+  background-color: rgba(15, 15, 15,0.9);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: rgb(36, 35, 35);
+}
+
+#main {
+  transition: margin-left .25s;
+  padding: 16px;
   position: fixed;
   z-index: 999;
-}
-
-#menu li{
-  list-style: none;
-  display: inline-block;
-  margin: 10px 10px 5px 0px;  
-}
-
-#menu a{
-  transition: all 0.15s ease-in-out;
-}
-
-#menu a:hover{
-    color:rgb(136, 221, 236);
-    border-bottom: solid rgb(136, 221, 236);
-}
-
-#menu li a{
-  font-family: sora, sans-serif;
-  color: #fff;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 600;
 }
 
 section{
@@ -66,6 +110,7 @@ section{
 
 #home{
  background-color: #000000;
+
 }
 
 
@@ -86,12 +131,13 @@ section{
 /* Add a hover effect if you want */
 .fa:hover {
   opacity: 0.7;
-  transform: scale(1.7);
+  transform: scale(2);
 }
 
  .fa-instagram {
   color: white;
   text-align: center;
+  transform: scale(1.5);
 }
 
 h1{
@@ -102,20 +148,18 @@ h1{
   color: #fff;
 }
 .cover_text{
-  font-family: Sora, sans-serif;
-  position: relative;
+  position: fixed;
   flex:content;
   text-align: center;
   color: white;
   float:left;
-  top:10%;
+  top:5%;
   width: 50%;
   font-size: 30px;
 }
 .cover_text1{
   font-family: Sora, sans-serif;
-  position: relative;
-  flex:content;
+  position: fixed;
   color: white;
   float:left;
   text-align: center;
@@ -125,26 +169,43 @@ h1{
   vertical-align: middle;
 }
 .cover_text2{
-  font-family: Sora, sans-serif;
-  text-decoration: overline;
-  justify-content: last baseline;
+  border-top: 1px solid white;
   font-size: 15px;
-  flex:content;
   color:white;
-  padding-left: 5vw;
-  padding-right: 55vw;
 }
 
 .cover_image{
-  width: 50%;
-  height: auto;
-  float: right;
+  position: fixed;
+  object-fit: cover;
+  max-width: 50%;
+  min-height: 100%;
+  margin-left:50vw;
 }
 
 .cover_image_mobile{
   width: 50%;
   height: auto;
   float: right;
+}
+
+.browse_insta{ 
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  margin-left: 19%;
+  bottom: 40px;
+  padding: 0 0 0 0;
+}
+
+.browse_insta a{
+  margin: 0 0 20px 0;
+  padding: 0 0 0 0;
+}
+
+.browse_insta p{
+  width:150px;
+  padding: 0 0 0 0;
 }
 
 
@@ -289,7 +350,6 @@ h1{
   width: 100%;
   max-width: 1000px;
   min-height: 900px;
-  background: #fff;
   display: grid;
   grid-template-columns: 1fr 2fr;
   box-sizing: 0 35px 55px rgba(0,0,0,0.1);
@@ -308,7 +368,6 @@ h1{
   align-items: center;
   padding-bottom:10px;
   border-bottom: 1px solid rgba(255,255,255, 0.2);
-  font-family: poppin, sans-serif;
   text-align: center;
 }
 
@@ -493,7 +552,7 @@ h1{
   margin: 5px 0;
 }
 
-@media(max-width: 420px){
+@media(max-width: 635px){
   .container_R{
     top:638px;
     grid-template-columns: repeat(1,1fr);
