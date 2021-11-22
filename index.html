@@ -30,26 +30,26 @@
         .sidebar a {font-size: 18px;}
 
         p.cover_text{
-            top: -0px;
+            position:fixed;
             padding-top:0;
             margin-top: 8px;
-            margin-bottom: 15px;
+            margin-top: 65vh;
             font-size: 20px;
             width: 100vw;
         }
 
         p.cover_text1{
+            position:fixed;
             width: 70vw;
             margin-left:15vw;
-            margin-top: 0%;
+            margin-top: 73vh;
             font-size: 15px
         }
         p.cover_text2{
             font-size: 15px;
             margin-right:0;
             padding-left: 0px;
-            padding-right:0;
-            
+            padding-right:0;  
         }
 
         ul#menu{
@@ -58,12 +58,14 @@
             font-size: 5px;
         }
         img.cover_image_mobile{
+            position:fixed;
             width: 100%;
             height: auto;
             display:flex;
         }
         .browse_insta{
             margin-left: 29vw;
+            bottom: 10px;
         }
         img.cover_image{
             display: none;
@@ -75,6 +77,37 @@
             width: 10px;
             transition: all 0.25s ease-in-out;
         }
+
+        p.cover_text{
+            animation: slide 3s;
+        }
+
+        .cover_text1{
+        animation: slide_left 2s;
+        }
+
+        .browse_insta{
+        animation:  slide_up 3s;
+        }
+        @keyframes slide{
+            0%{margin-left:-2500px;}
+            20%{margin-left:-800px;}
+            35%{margin-left:0px;}
+            100%{margin-left:0px;}
+        }
+
+        @keyframes slide_left{
+        0%{margin-left:2000px;}
+        70%{margin-left:500px;}
+        100%{margin-left:15vw;}
+        }
+
+        @keyframes slide_up{
+            0%{bottom:-500px;}
+            20%{bottom:-100;}
+            100%{bottom:10px;}
+        }
+        
     }
 
     .cover_image_mobile{
@@ -97,18 +130,17 @@
         </div>
 
 
-      <picture>
-            <source srcset="" media="(min-width: 500px)">
+        <div class ="picture">
             <img class = "cover_image" src ="img/cover.jpg"> 
-        </picture>
-
             <img class = "cover_image_mobile" src ="img/cover_mobile.jpg">
-   
+        </div>
 
          
-   
+    <div class="wrapper">
          <p class = "cover_text" >Programmer || Photographer</p>
-         <p class = "cover_text1"> Passionate lover of photography and film-making. Custom keyboards, desk setup, games, and tech accesorries enthusiast residing in New York. </p>
+      
+         <p class = "cover_text1">Passionate  lover of photography and film-making. Custom keyboards, desk setup, games, and tech accesorries enthusiast residing in New York. </p> 
+    </div>
     
          <!-- Add icon library -->
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

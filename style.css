@@ -113,11 +113,53 @@ section{
 
 }
 
-
-
 #contact{
    background-color: #98caeb;
 }
+
+.wrapper{
+  display: inline-block;
+  overflow-x: hidden;
+}
+
+.wrapper p{
+  white-space: normal;
+}
+
+.cover_text{
+  animation: slide 5s;
+  
+  
+}
+
+.cover_text1{
+  animation: slide_left 5s;
+}
+
+.browse_insta{
+  animation:  slide_up 3s;
+}
+
+
+@keyframes slide{
+  0%{margin-left:-2500px;}
+  20%{margin-left:-800px;}
+  35%{margin-left:0px;}
+100%{margin-left:0px;}
+}
+@keyframes slide_left{
+  0%{margin-left:2000px;}
+  20%{margin-left:800px;}
+  35%{margin-left:0px;}
+100%{margin-left:0px;}
+}
+
+@keyframes slide_up{
+  0%{bottom:-500px;}
+  20%{bottom:-100;}
+  100%{bottom:40px;}
+}
+
 
 .fa {
   margin-top: 10%;
@@ -158,15 +200,13 @@ h1{
   font-size: 30px;
 }
 .cover_text1{
-  font-family: Sora, sans-serif;
   position: fixed;
   color: white;
-  float:left;
+  display: inline-block;
   text-align: center;
   width:50%;
   margin-top: 20%;
-  display: table-cell;
-  vertical-align: middle;
+  white-space: normal;
 }
 .cover_text2{
   border-top: 1px solid white;
@@ -241,7 +281,7 @@ h1{
 .container .box{
  display: flex;
  flex-direction: row;
- justify-content:space-between;
+ justify-content:space-around;
  
 }
 
@@ -293,6 +333,7 @@ h1{
   font-size: 1em;
 }
 }
+
 /* Diplaying hover text over photo and provide link */
 .tile h4 {
   font-family: sora,sans-serif;
@@ -337,18 +378,19 @@ h1{
 
 /* Resume page */
 #contact{
-  display: flex;
+  display:flex;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  font-family: 'Times New Roman', Times, sans-serif
+  height: auto;
+  min-height: 1300px;
+  font-family: 'Times New Roman', Times, sans-serif;
 }
 
 
 .container_R{
-  position:relative;
   width: 100%;
+  margin-top: 10vh;
   max-width: 1000px;
+  max-height: 1000px;
   min-height: 900px;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -399,6 +441,7 @@ h1{
 }
 #contact .icon .fa{
   margin: 0 20px 0 0;
+  transform: none;
   color:rgb(136, 221, 236);
 }
 
@@ -554,7 +597,8 @@ h1{
 
 @media(max-width: 635px){
   .container_R{
-    top:638px;
+    margin-top: 0;
+    height: auto;
     grid-template-columns: repeat(1,1fr);
   }
 
