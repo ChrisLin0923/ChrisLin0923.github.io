@@ -41,8 +41,8 @@
         p.cover_text1{
             position:fixed;
             width: 70vw;
-            margin-left:15vw;
-            margin-top: 73vh;
+            /* margin-left:15vw; */
+            margin-top: 75vh;
             font-size: 15px
         }
         p.cover_text2{
@@ -64,7 +64,7 @@
             display:flex;
         }
         .browse_insta{
-            margin-left: 29vw;
+            /* margin-left: 29vw; */
             bottom: 10px;
         }
         img.cover_image{
@@ -78,12 +78,19 @@
             transition: all 0.25s ease-in-out;
         }
 
-        p.cover_text{
+        .wrapper{
+            overflow-x: hidden;
+            display: flex;
+            padding-right: 0vw;
+            justify-content: center;
+        }
+
+        .cover_text{
             animation: slide 3s;
         }
 
         .cover_text1{
-        animation: slide_left 2s;
+        animation: slide_left 3s;
         }
 
         .browse_insta{
@@ -91,15 +98,14 @@
         }
         @keyframes slide{
             0%{margin-left:-2500px;}
-            20%{margin-left:-800px;}
-            35%{margin-left:0px;}
+            35%{margin-left:-800px;}
             100%{margin-left:0px;}
         }
 
         @keyframes slide_left{
         0%{margin-left:2000px;}
-        70%{margin-left:500px;}
-        100%{margin-left:15vw;}
+        35%{margin-left:800px;}
+        100%{margin-left:0vw;}
         }
 
         @keyframes slide_up{
@@ -125,35 +131,36 @@
             <a href="#photo">Gallery</a>
             <a href="#contact">About Me</a>
         </div>
+
+
         <div id="main">
              <button class="openbtn" onclick="openNav()">☰</button>  
         </div>
-
-
-        <div class ="picture">
-            <img class = "cover_image" src ="img/cover.jpg"> 
-            <img class = "cover_image_mobile" src ="img/cover_mobile.jpg">
-        </div>
-
-         
-    <div class="wrapper">
+   
+    <section class="wrapper">
          <p class = "cover_text" >Programmer || Photographer</p>
       
          <p class = "cover_text1">Passionate  lover of photography and film-making. Custom keyboards, desk setup, games, and tech accesorries enthusiast residing in New York. </p> 
-    </div>
+   
     
          <!-- Add icon library -->
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
          <!-- Add font awesome icons -->
-          <div class = "browse_insta">
+        <div class = "browse_insta">
             <a URL = "https://www.instagram.com/focus.on.fire/"; href="https://www.instagram.com/focus.on.fire/" class="fa fa-instagram"></a>
  
             <p style=" text-align: center;"; class = "cover_text2"> Browse My Portfolio </p> 
-        </div> 
-        
+        </div>
+
 </section>
+        <div class ="picture">
+            <img class = "cover_image" src ="img/cover.jpg"> 
+            <img class = "cover_image_mobile" src ="img/cover_mobile.jpg">
+        </div>
+ 
+    </section>
 
 <section id="photo"> 
     <div class="container">

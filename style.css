@@ -3,7 +3,7 @@
 
 html {
   --scrollbarBG: #000000;
-  --thumbBG: #b0d2e4;
+  --thumbBG: pink;
 }
 body::-webkit-scrollbar {
   width: 11px;
@@ -118,8 +118,9 @@ section{
 }
 
 .wrapper{
-  display: inline-block;
-  overflow-x: hidden;
+  display: flex;
+  padding-right: 50vw;
+  justify-content: center;
 }
 
 .wrapper p{
@@ -127,36 +128,34 @@ section{
 }
 
 .cover_text{
-  animation: slide 5s;
-  
-  
+  animation: slide 3s;
 }
 
 .cover_text1{
-  animation: slide_left 5s;
+  animation: slide_left 3s;
 }
 
 .browse_insta{
-  animation:  slide_up 3s;
+  animation:  slide_up 2s;
 }
 
 
 @keyframes slide{
-  0%{margin-left:-2500px;}
-  20%{margin-left:-800px;}
-  35%{margin-left:0px;}
+  0%{margin-left:-100%;}
+  20%{margin-left:-60%;}
+  70%{margin-left:0px;}
 100%{margin-left:0px;}
 }
 @keyframes slide_left{
-  0%{margin-left:2000px;}
-  20%{margin-left:800px;}
-  35%{margin-left:0px;}
+  0%{margin-left:100%;}
+  20%{margin-left:60%;}
+  70%{margin-left:0px;}
 100%{margin-left:0px;}
 }
 
 @keyframes slide_up{
-  0%{bottom:-500px;}
-  20%{bottom:-100;}
+  0%{bottom:-100%;}
+  60%{bottom:-10%;}
   100%{bottom:40px;}
 }
 
@@ -186,9 +185,10 @@ h1{
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   color: #fff;
 }
+
 .cover_text{
   position: fixed;
   flex:content;
@@ -198,15 +198,20 @@ h1{
   top:5%;
   width: 50%;
   font-size: 30px;
+  text-shadow: 0px 8px 7px rgb(193, 229, 240);
+  transition: all 0.25s ease-in-out;
 }
+
+.cover_text:hover{
+  text-shadow: 0px 12px 7px rgb(113, 171, 247);
+}
+
 .cover_text1{
   position: fixed;
   color: white;
-  display: inline-block;
   text-align: center;
-  width:50%;
+  width:45%;
   margin-top: 20%;
-  white-space: normal;
 }
 .cover_text2{
   border-top: 1px solid white;
@@ -216,10 +221,10 @@ h1{
 
 .cover_image{
   position: fixed;
-  object-fit: cover;
-  max-width: 50%;
+  object-fit:cover;
+  max-width: 50vw;
   min-height: 100%;
-  margin-left:50vw;
+  margin-left: 50vw;
 }
 
 .cover_image_mobile{
@@ -233,7 +238,6 @@ h1{
   flex-direction: column;
   align-items: center;
   position: absolute;
-  margin-left: 19%;
   bottom: 40px;
   padding: 0 0 0 0;
 }
@@ -248,6 +252,10 @@ h1{
   padding: 0 0 0 0;
 }
 
+.picture{
+  float: right;
+  position: fixed;
+}
 
 /* Photo gallery page 1 */
 
@@ -344,12 +352,12 @@ h1{
   opacity: 0;
   grid-row: 1; /* place in first row */
   grid-column: 1;  /* place in first column */
-  transition: all 0.35s ease-in-out;
+  transition: all 0.25s ease-in-out;
   align-self: flex-start; /* take auto-width */
 }
 .tile {
   position: relative;
-  transition: all 0.35s ease-in-out;
+  transition: all 0.25s ease-in-out;
   width: 100%;
   display: grid; /* an inner grid */
 }
