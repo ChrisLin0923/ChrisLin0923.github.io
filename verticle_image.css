@@ -36,6 +36,9 @@ html{
 .grid1 .specs{
     bottom:0;
     right:0;
+    font-family: 'Sora', sans-serif;
+    font-weight: 100;
+    font-size: 15px;
     margin-bottom:10vh;
     margin-right: 13vw;
     position: absolute;
@@ -189,7 +192,7 @@ button:hover {
   }
 
 
-  @media screen and (max-width: 450px){
+  @media screen and (max-width: 1050px){
     .grid1 .verticle_img{
         width: 90vw;
         align-content: center;
