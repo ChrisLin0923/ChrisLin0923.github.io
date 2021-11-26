@@ -1,0 +1,282 @@
+h1{
+    text-align: center;
+}
+div, section, span, ul, li, a{
+    box-sizing: border-box;
+}   
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.grid_container{
+    display: grid;
+    margin-top: 10vh;
+    grid-template-columns:30vw 30vw;
+    justify-content: center;
+    align-content: center;
+    height: auto;
+}
+
+.grid_container .grid1{
+    position: relative;
+    justify-content: center;
+}
+.grid1{
+    position: relative;
+}
+
+.grid1 .specs{
+    bottom:0;
+    right:0;
+    margin-bottom:10vh;
+    margin-right: 13vw;
+    position: absolute;
+    text-align: center;
+    background-color: black;
+    color:white;
+    width: 180px;
+    opacity: 0;
+    transition: all 0.25s ease-in-out;
+}
+.grid1:hover .specs{
+    opacity: 1;
+}
+
+.verticle_img:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.grid1 img{
+    width: 25vw;
+    height: 90%;
+    transition: all 0.35s ease-in-out;
+}
+
+.grid_container .grid2{
+    position: relative;
+}
+
+.grid2{
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+}
+
+.grid2 p{
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+.grid2 a{
+    align-self: center;
+    margin-right: 20px;
+}
+
+.verticle_img{
+    width: 100%;
+    height: 100%;
+    box-shadow: 2px 2px 10px black;
+    animation: slide 3s;
+}
+
+h1{
+    white-space: nowrap;
+    animation: slide_left 3s;
+}
+
+.story_verticle_text{
+    animation: slide_left 3s;
+    
+}
+
+a{
+    animation: slide_left 3s;
+}
+
+
+
+
+
+
+button {
+    -webkit-appearance: none;
+    background: -webkit-gradient(to right, #a2ccb6 0%, #fceeb5 50%, #ee786e 100%);
+    background: linear-gradient(to right, #a2ccb6 0%, #fceeb5 50%, #ee786e 100%);
+    background-size: 500%;
+    border: none;
+    border-radius: 5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    color: #fff;
+    cursor: pointer;
+    font: 1.5em Raleway, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 3rem;
+    letter-spacing: 0.05em;
+    outline: none;
+    -webkit-tap-highlight-color: transparent !important;  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 10rem;
+
+
+}
+  
+button:hover {
+    animation-name: gradient;
+    -webkit-animation-name: gradient;
+    animation-duration: 2s;
+    -webkit-animation-duration: s;
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100%;
+    }
+  }
+
+  @keyframes slide{
+    0%{margin-left:-300%;}
+    35%{margin-left:-60%;}
+    70%{margin-left:0px;}
+  100%{margin-left:0px;}
+  }
+  @keyframes slide_left{
+    0%{margin-left:300%;}
+    30%{margin-left:60%;}
+    70%{margin-left:0px;}
+  100%{margin-left:0px;}
+  }
+
+  /* @media screen and (){
+    .grid1 .verticle_img{
+        width: 40vw;
+        align-content: center;
+        margin-left: 30vw;
+    }
+    .grid2 h1{
+        font-size: 25px;
+    }
+    
+    .grid2 p{
+        display:flex;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        font-size: 20px;
+        width: 80vw;
+        margin-left: 5vw;
+    }
+
+    .verticle_img{
+        animation: slide 3s;
+    }
+
+    h1{
+        animation: slide_left1 3s;
+    }
+
+    a{
+        animation: slide_left1 3s;
+    }
+
+    .grid_container{
+        margin-top: 10px;
+        display:flex;
+        flex-direction: column;
+    }
+
+    @keyframes slide{
+        0%{margin-left:-300%;}
+        35%{margin-left:-60%;}
+        70%{margin-left:30vw;}
+      100%{margin-left:30vw;}
+      }
+
+      @keyframes slide_left1{
+        0%{margin-left:300%;}
+        30%{margin-left:30%;}
+        70%{margin-left:0px;}
+      100%{margin-left:0px;}
+      }
+      
+      @keyframes slide_left{
+        0%{margin-left:300%;}
+        30%{margin-left:30%;}
+        70%{margin-left:5vw;}
+      100%{margin-left:5vw;}
+      }
+} */
+  
+
+  @media screen and (max-width: 450px){
+    .grid1 .verticle_img{
+        width: 90vw;
+        align-content: center;
+    }
+    .grid2 h1{
+        font-size: 18px;
+    }
+    
+    .grid2 p{
+        display:flex;
+        text-align: center;
+        align-content: center;
+        justify-content: center;
+        font-size: 14px;
+        width: 90%;
+    }
+
+    h1{
+        animation: slide_left1 3s;
+    }
+
+    a{
+        animation: slide_left1 3s;
+    }
+
+    .grid_container{
+        margin-top: 10px;
+        display:flex;
+        flex-direction: column;
+    }
+
+    @keyframes slide{
+        0%{margin-left:-300%;}
+        35%{margin-left:-60%;}
+        70%{margin-left:5vw;}
+      100%{margin-left:5vw;}
+      }
+
+      @keyframes slide_left1{
+        0%{margin-left:300%;}
+        30%{margin-left:30%;}
+        70%{margin-left:0px;}
+      100%{margin-left:0px;}
+      }
+      
+      @keyframes slide_left{
+        0%{margin-left:300%;}
+        30%{margin-left:30%;}
+        70%{margin-left:5vw;}
+      100%{margin-left:5vw;}
+      }
+}

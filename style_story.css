@@ -14,8 +14,11 @@ html{
     padding: 0;
 }
 
+
+
 .img6{
-    width: 60vw;
+    width: 30vw;
+    align-self: center;
     height: auto;
     margin: 5% 20% 5% 20%;
     border: 2px solid white;
@@ -24,24 +27,6 @@ html{
     transition: all .25s ease-in-out;
     backface-visibility: hidden;
 }
-
-.verticle_container{
-    width: 40vw;
-}
-
-.verticle_img{
-    width: 40vw;
-    height: 95vh;
-    margin: 5px 30% 5% 0%;
-    border: 2px solid white;
-    opacity: 1;
-    display: block;
-  
-    transition: all .25s ease-in-out;
-    backface-visibility: hidden;
-}
-
-
 
 .text6{
     font-family: 'Times New Roman', Times, serif;
@@ -56,37 +41,28 @@ html{
     opacity: 1;
 }
 
-.verticle_container:hover .middle_verticle{
-    opacity: 1;
-}
-
 .container:hover .img6{
     opacity: 0.8;
     transform: scale(1.1);
     border: 2px solid rgb(231, 169, 87);
 }
-.verticle_container:hover .verticle_img{
-    opacity: 0.8;
-    transform: scale(1.04);
-    border: 2px solid rgb(231, 169, 87);
-}
+
 
 
 .story_text6{
     margin:5% 15vw 3% 15vw ;
     text-align:center;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size:25px;
     font-family: 'Times New Roman', Times, serif;
 }
 
 .story_verticle_text{
     position: relative; 
-    margin-left: 45vw;
+    margin-left: 55vw;
     margin-right:5vw;
     text-justify: auto;
     margin-top: 5%;
-    top: -670px; 
     cursor: move;
     text-align:center;
     color: white;
