@@ -83,7 +83,6 @@ html{
 }
 .grid2 a{
     align-self: center;
-    margin-right: 20px;
 }
 
 .verticle_img{
@@ -108,7 +107,7 @@ h1{
 }
 
 a{
-    margin-top: 40px;
+    margin: 40px 0 0 0;
     animation: slide_left2 4s;
 }
 
@@ -226,6 +225,7 @@ button:hover {
 
     a{
         animation: slide_left 3s;
+        margin: 40px 0px 0 0;
     }
 
     .grid_container{
