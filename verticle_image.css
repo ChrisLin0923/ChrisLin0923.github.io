@@ -225,7 +225,7 @@ button:hover {
 
     a{
         animation: slide_left 3s;
-        margin: 40px 0px 0 0;
+        margin: 40px 0px 30px 0;
     }
 
     .grid_container{
