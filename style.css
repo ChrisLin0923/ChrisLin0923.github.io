@@ -136,26 +136,26 @@ section{
 }
 
 .browse_insta{
-  animation:  slide_up 2s;
+  animation:  slide_up 3s;
 }
 
 
 @keyframes slide{
-  0%{margin-left:-100%;}
-  20%{margin-left:-60%;}
-  70%{margin-left:0px;}
+  0%{margin-left:-200%;}
+  /* 20%{margin-left:-60%;}
+  70%{margin-left:0px;} */
 100%{margin-left:0px;}
 }
 @keyframes slide_left{
-  0%{margin-left:100%;}
-  20%{margin-left:60%;}
-  70%{margin-left:0px;}
+  0%{margin-left:200%;}
+  /* 20%{margin-left:60%;}
+  70%{margin-left:0px;} */
 100%{margin-left:0px;}
 }
 
 @keyframes slide_up{
   0%{bottom:-100%;}
-  60%{bottom:-10%;}
+  /* 60%{bottom:-10%;} */
   100%{bottom:40px;}
 }
 

@@ -5,6 +5,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;500&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,73 +21,54 @@
             background-color: #312f2f;
         }
 
-        @media screen and (max-width: 450px){
-            #title{
-                text-align: center;
-                font-size: 30px;
-                font-family: 'Times New Roman', Times, serif;
-            }
-            
-            .story_text6{
-                font-size: 15px;
-                margin: 10% 10% 10% 10%;
-            }
-                
-            .container:hover .img6{
-                opacity: 0.8;
-                transform: scale(1.05);
-                border: 2px solid rgb(231, 169, 87);
-            }
+        .title{
+            color:white;
+            font-family: 'Sora', sans-serif;
+        }
 
-            .img6{
-                width: 90%;
-                margin: 5%;
-            }
-            .middle{
-                transition: .5s ease;
-                opacity: 0;
-                position: absolute;
-                top: 50vw;
-                left: 50vw;
-                transform: translate(-50%, -50%);
-                -ms-transform: translate(-50%, -50%);
-                text-align: center;
-            }
-            .specs{
-                background-color: black;
-                font-family: sora, sans-serif;
-                color:white;
-                font-size: 12px;
-                padding: 16px 32px;
-                transition: all 0.35s ease-in-out;
-            }
-            .button{
-                margin-top:150px;
-                margin-left: 27vw;
-                margin-right:0;
-            }
-    }
+        .story_text{
+            color:white;
+            font-weight: 100;
+            font-family: 'Sora', sans-serif;
+        }
+
     </style>
 
     
     
 </head>
 <body>
-    <h1 id ="title" class = "text6">Desk Setup</h1>
+    
 
-    <div class = "container">
-        <img class ="img6" src = "img/12.jpg">
-        <div class ="middle">
-        <p class="specs">
-            Shutter Speed: 1/60s <br>
-            Focal Length: 16mm <br>
-            Aperture: f3.5 <br>
-          </p>
+    <div class="flex_container">
+        <div class ="img_container">
+
+                <p class="specs">
+                    Shutter Speed: 1/60s <br>
+                    Focal Length: 16mm <br>
+                    Aperture: f3.5 <br>
+                </p>
+
+                <img class ="img" src = "img/12.jpg">
+
         </div>
-    </div>
- 
-    <p class=story_text6> One of my favorite type of video to watch on youtube is desk setups from different people. I love to design my setup with the accesories and tools that I enjoy using, with asthetic and minimalism in mind. I have a Canon 80D as webcam, a custom built keyboard, 27 inch high refresh rate monitor, a ipad air 4th gen, Macbook Pro m1, and a PC with I9-98500k.</p>
 
-    <a href="index.html"><button class ="button">Go Back</button></a>
+        <div class ="story_container">
+
+            <h1 class = "title"> The Work Space </h1>
+
+           
+            <p class=story_text> One of my favorite type of video to watch on youtube is desk setups from different people. I love to design my setup with the accesories and tools that I enjoy using, with asthetic and minimalism in mind. I have a Canon 80D as webcam, a custom built keyboard, 27 inch high refresh rate monitor, a ipad air 4th gen, Macbook Pro m1, and a PC with I9-98500k.</p>
+            
+ 
+        
+            <a href="index.html"><button>Go Back</button></a>
+        
+        </div>
+
+    </div>
+
+
+
 </body>
 </html>
