@@ -88,30 +88,30 @@
 
         .cover_text{
             animation: slide 3s;
+            -webkit-animation: slide 3s;
         }
 
         .cover_text1{
-        animation: slide_left 3s;
+            animation: slide_left 3s;
+            -webkit-animation: slide_left 3s;
         }
 
         .browse_insta{
         animation:  slide_up 3s;
+        -webkit-animation: slide_up 3s;
         }
         @keyframes slide{
             0%{margin-left:-2500px;}
-            35%{margin-left:-800px;}
             100%{margin-left:0px;}
         }
 
         @keyframes slide_left{
         0%{margin-left:2000px;}
-        35%{margin-left:800px;}
         100%{margin-left:0vw;}
         }
 
         @keyframes slide_up{
             0%{bottom:-500px;}
-            20%{bottom:-100;}
             100%{bottom:10px;}
         }
         

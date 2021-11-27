@@ -22,7 +22,7 @@ html{
     flex-direction: column;
     align-self: center;
     align-content: center;
-    margin: 2% 30% 0% 30%;
+    margin: 10% 30% 0% 30%;
     text-align: center;
 }
 
@@ -54,7 +54,7 @@ html{
     margin:2% 5% 5% 5%;
     text-align:center;
     color: rgb(0, 0, 0);
-    font-size:25px;
+    font-size:20px;
     font-family: 'Sora', sans-serif;
 }
 

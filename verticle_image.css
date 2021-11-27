@@ -104,9 +104,8 @@ h1{
 }
 
 .story_verticle_text{
-    margin-top: 40px;
+    margin-top: 20px;
     animation: slide_left1 4s;
-    
 }
 
 a{
@@ -199,8 +198,8 @@ button:hover {
         margin-left: 5%;
     }
     .grid2 h1{
+        margin-top: 30px;
         font-size: 18px;
-       
     }
     
     .grid2 p{
@@ -223,7 +222,6 @@ button:hover {
     
     .story_verticle_text{
         animation: slide_left1 3s;
-        
     }
 
     a{
