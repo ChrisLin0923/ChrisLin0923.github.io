@@ -160,27 +160,6 @@ section{
   animation:  slide_up 3s;
 }
 
-
-@keyframes slide{
-  0%{margin-left:-200%;}
-  /* 20%{margin-left:-60%;}
-  70%{margin-left:0px;} */
-100%{margin-left:0px;}
-}
-@keyframes slide_left{
-  0%{margin-left:200%;}
-  /* 20%{margin-left:60%;}
-  70%{margin-left:0px;} */
-100%{margin-left:0px;}
-}
-
-@keyframes slide_up{
-  0%{bottom:-100%;}
-  /* 60%{bottom:-10%;} */
-  100%{bottom:40px;}
-}
-
-
 .fa {
   margin-top: 10%;
   margin-left: 24%;
@@ -623,6 +602,37 @@ h1{
   color: #333;
   font-weight: 500;
   margin: 5px 0;
+}
+
+.container_R{
+  animation: slide 3s;
+}
+
+.container_R .left_Side{
+
+}
+
+.container_R .right_Side{
+  
+}
+
+@keyframes slide{
+  0%{margin-left:-200%;}
+  /* 20%{margin-left:-60%;}
+  70%{margin-left:0px;} */
+100%{margin-left:0px;}
+}
+@keyframes slide_left{
+  0%{margin-left:200%;}
+  /* 20%{margin-left:60%;}
+  70%{margin-left:0px;} */
+100%{margin-left:0px;}
+}
+
+@keyframes slide_up{
+  0%{bottom:-100%;}
+  /* 60%{bottom:-10%;} */
+  100%{bottom:40px;}
 }
 
 @media(max-width: 635px){
