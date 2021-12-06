@@ -14,6 +14,8 @@ var animateHTML = function() {
   checkPosition();
   }
   
+  const mediaQuery = window.matchMedia('(min-width: 650px)');
+
   function addEventHandlers() {
       window.addEventListener('scroll', checkPosition);
       window.addEventListener('resize', init);
@@ -28,12 +30,6 @@ var animateHTML = function() {
       'animate'
       );
   }
-  //     if ((positionFromTop - windowHeight > 1) || (positionFromTop < 0)) {
-  //     elems[i].className = elems[i].className.replace(
-  //     'animate',
-  //     'hidden'
-  //     );
-  // }
   };
 
   for (var i = 0; i < elems2.length; i++) {
@@ -62,19 +58,33 @@ elems4[i].className = elems4[i].className.replace(
   'hidden_left',
   'animate4'
   );
+
+}
+if (((positionFromTop - windowHeight > 1) || (positionFromTop < 0))&& mediaQuery.maches) {
+  elems4[i].className = elems4[i].className.replace(
+  'animate4',
+  'hidden_left'
+  );
 }
 };
 
 for (var i = 0; i < elems5.length; i++) {
   var positionFromTop = elems5[i].getBoundingClientRect().top;
-  if (positionFromTop - windowHeight <= 0) {
-elems5[i].className = elems5[i].className.replace(
-  'hidden_right',
-  'animate5'
-  );
+    if (positionFromTop - windowHeight <= 0) {
+  elems5[i].className = elems5[i].className.replace(
+    'hidden_right',
+    'animate5'
+    );
+  }
+  
+  if (((positionFromTop - windowHeight > 1) || (positionFromTop < 0)) && mediaQuery.maches) {
+    elems5[i].className = elems5[i].className.replace(
+    'animate5',
+    'hidden_right'
+    );
+  }
+  };
 }
-};
-    }
   
   return {
   init: init

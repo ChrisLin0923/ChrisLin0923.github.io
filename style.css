@@ -377,11 +377,11 @@ h1{
   height: auto;
   min-height: 1300px;
   font-family: 'Times New Roman', Times, sans-serif;
-  overflow: hidden;
 }
 
 
 .container_R{
+  display: flex;
   width: 100%;
   margin-top: 10vh;
   max-width: 1000px;
@@ -704,6 +704,9 @@ h1{
 
   #contact{
     background: white;
+    
   }
+
+
 }
 
