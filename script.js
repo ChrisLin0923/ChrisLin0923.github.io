@@ -60,7 +60,7 @@ elems4[i].className = elems4[i].className.replace(
   );
 
 }
-if (((positionFromTop - windowHeight > 1) || (positionFromTop < 0))&& mediaQuery.maches) {
+if (((positionFromTop - windowHeight > 1) || (positionFromTop < 0))&& !mediaQuery.maches) {
   elems4[i].className = elems4[i].className.replace(
   'animate4',
   'hidden_left'
@@ -77,7 +77,7 @@ for (var i = 0; i < elems5.length; i++) {
     );
   }
   
-  if (((positionFromTop - windowHeight > 1) || (positionFromTop < 0)) && mediaQuery.maches) {
+  if (((positionFromTop - windowHeight > 1) || (positionFromTop < 0)) && !mediaQuery.maches) {
     elems5[i].className = elems5[i].className.replace(
     'animate5',
     'hidden_right'
