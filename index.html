@@ -3,8 +3,10 @@
 
 <head>
 
-    <script src="script.js"></script>
+    
+    <!-- <script type ="text/javascript" language ="javascript" src ="/PersonalPage/jquery-3.6.0.js"></script> -->
 
+   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +19,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" rel ="preload" as ="style" href="style.css">
     <title>One Page</title>
-    
+    <script src="script.js"></script>
 </head>
 
 <style>
@@ -123,17 +125,15 @@
     
 
 </style>
+<body>
 
-    <section id="home">
-
+<section id="home">
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             <a href="#home">Home</a>
             <a href="#photo">Gallery</a>
             <a href="#contact">About Me</a>
         </div>
-
-
         <div id="main">
              <button class="openbtn" onclick="openNav()">☰</button>  
         </div>
@@ -154,14 +154,14 @@
  
             <p style=" text-align: center;"; class = "cover_text2"> Browse My Portfolio </p> 
         </div>
+    </section>
 
-</section>
         <div class ="picture">
             <img class = "cover_image" src ="img/cover.jpg"> 
             <img class = "cover_image_mobile" src ="img/cover_mobile.jpg">
         </div>
  
-    </section>
+</section>
 
 <section id="photo"> 
     <div class="container">
@@ -171,76 +171,80 @@
         <div class="box">
         
         <div class="dream">
-            <img src="img/1.jpg">
+            <img class="hidden"src="img/1.jpg">
             <div class="tile">
                 <a href ="Snow_storm2.html">
-                    <img src="img/2.jpg">
+                    <img  class="hidden" src="img/2.jpg">
                 </a>
                 <h4>Story Behind This Photo</h4>
-            </div>
-            <img src="img/3.jpg">
-            <div class="tile">
+        </div>
+            <img class="hidden" src="img/3.jpg">
+
+         <div class="tile">
                 <a href ="Snow_storm.html">
-                    <img src="img/4.jpg">
+                    <img  class="hidden" src="img/4.jpg">
                 </a>
                 <h4>Story Behind This Photo</h4>
             </div>
-            <img src="img/5.jpg"> 
+            <img  class="hidden" src="img/5.jpg"> 
         </div>
 
         <div class="dream">
             <div class="tile">
                 <a href ="Ferry_To_Governer's_Island.html">
-            <img src="img/6.jpg">
+            <img  class="hidden2" src="img/6.jpg">
                 </a>
         <h4>Story Behind This Photo</h4>
         
         </div>
             <div class="tile">
                 <a href ="mountains.html">
-                    <img src="img/7.jpg">
+                    <img class="hidden2"  src="img/7.jpg">
                 </a>
                 <h4>Story Behind This Photo</h4>
             </div>
 
-        <img src="img/8.jpg">
+        <img  class="hidden2" src="img/8.jpg">
 
         <div class="tile">
             <a href ="Autumn_Smile.html">
-                <img src="img/9.jpg">
+                <img  class="hidden2" src="img/9.jpg">
              </a>
             <h4>Story Behind This Photo</h4>
         </div>
 
-            <img src="img/10.jpg">
-            <img src="img/16.jpg">
-            <img src="img/17.jpg">
+            <img  class="hidden2" src="img/10.jpg">
+            <img class="hidden2"  src="img/16.jpg">
+            <img  class="hidden2" src="img/17.jpg">
+            <img  class="hidden2" src="img/18.jpg">
         </div>
             <div class="dream">
-            <img src="img/11.jpg">
+            <img class="hidden3"  src="img/11.jpg">
             <div class="tile">
                 <a href ="desk.html">
-                    <img src="img/12.jpg">
+                    <img  class="hidden3" src="img/12.jpg">
                 </a>
                 <h4>Story Behind This Photo</h4>
             </div>
-            <img src="img/13.jpg">
+            <img  class="hidden3" src="img/13.jpg">
             
         <div class="tile">
             <a href ="Into_The_City.html">
-                <img src="img/14.jpg">
+                <img class="hidden3"  src="img/14.jpg">
                 </a>
             <h4>Story Behind This Photo</h4>
         </div>
 
-            <img src="img/15.jpg">    
+            <img  class="hidden3" src="img/15.jpg">    
+            <img  class="hidden3" src="img/19.jpg">
             </div>
         </div>
     </div>
     
     <section id ="contact">
-        <div class = "container_R">
-            <div class="left_Side">
+        
+        <div class = "container_R ">
+            <div class="left_Side hidden_left">
                 <div class="profileText"> 
                     <div class="imgBx">
                         <img src="img/cover_profile.png">
@@ -292,18 +296,18 @@
                     <ul>
                         <li>
                             <span class="text"> English</span>
-                            <span class="percent">  <div style="width: 90%;"> </div> </span>
+                            <span class="percent ">  <div class ="hidden" style=" width: 90%;"> </div> </span>
                         </li>
                         <li>
                             <span class="text"> Chinese</span>
-                            <span class="percent"> <div style="width: 75%;"></div>  </span>
+                            <span class="percent"> <div class ="hidden" style="width: 75%;"></div>  </span>
                         </li>
                     </ul>
                 </div>
             </div>
 
 
-            <div class="right_Side">
+            <div class="right_Side hidden_right">
                 <div class="about">
                     <h2 class = "title1"> Profile </h2>
                     <p> Passionate College Sophomore with experience in programming, and have developed skills to work in a team. Possessing the ability to clearly articulate logical ideas and creative solutions. Motivated to actively overcome challenges and facilitate my knowledge in the field. </p>
@@ -353,7 +357,7 @@
                     <div class="box">
                         <h4> Java </h4>
                         <div class="percent"> 
-                            <div style="width: 90%;"></div>
+                            <div class ="hidden" style="width: 90%;"></div>
                         </div>
                     
                     </div>
@@ -361,35 +365,35 @@
                     <div class="box">
                         <h4> C++ </h4>
                         <div class="percent"> 
-                            <div style="width: 75%;"></div>
+                            <div class ="hidden" style="width: 75%;"></div>
                         </div>
                     </div>
                     
                     <div class="box">
                         <h4> HTML </h4>
                         <div class="percent"> 
-                            <div style="width: 80%;"></div>
+                            <div class ="hidden" style="width: 80%;"></div>
                         </div>
                     </div>
 
                     <div class="box">
                         <h4> CSS </h4>
                         <div class="percent">
-                            <div style="width: 80%;"></div> 
+                            <div class ="hidden" style="width: 80%;"></div> 
                         </div>
                     </div>
 
                     <div class="box">
                         <h4> Photography </h4>
                         <div class="percent"> 
-                            <div style="width: 95%;"></div> 
+                            <div class ="hidden" style="width: 95%;"></div> 
                         </div>
                     </div>
 
                     <div class="box">
                         <h4> Photo/Video Editing </h4>
                         <div class="percent"> 
-                            <div style="width: 95%;"></div> 
+                            <div class ="hidden" style="width: 95%;"></div> 
                         </div>
                     </div>
                 </div>
@@ -414,7 +418,7 @@
     </section>
 
 </section>
-
+<body onload="animateHTML().init();"></body>
 </body>
 
 </html>
