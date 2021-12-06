@@ -87,7 +87,7 @@ div, section, span, ul, li, a{
   cursor: pointer;
   background-color: rgba(15, 15, 15,0.9);
   color: white;
-  padding: 10px 10px;
+  padding: 10px 15px;
   border: none;
 }
 
@@ -681,10 +681,16 @@ h1{
 100%{margin-left:0px;}
 }
 
-@keyframes slide_up{
+/* @keyframes slide_up{
   0%{bottom:-100%;}
   100%{bottom:40px;}
+} */
+
+@keyframes slide_up{
+  0%{transform: translate(0,240px);}
+  100%{transform: translate(0,0);}
 }
+
 
 @media(max-width: 635px){
   .container_R{

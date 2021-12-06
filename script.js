@@ -91,6 +91,17 @@ for (var i = 0; i < elems5.length; i++) {
   };
   };
 
+  document.getElementsByClassName("openbtn").addEventListener("click", toggleNav);
+
+  function toggleNav(){
+      navSize = document.getElementById("mySidebar").style.width;
+      if (navSize == 170) {
+          return closeNav();
+      }
+      else{
+      return openNav();
+      }
+  }
 
 function openNav() {
   document.getElementById("mySidebar").style.width = "170px";
@@ -101,3 +112,4 @@ function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft= "0";
 }
+
