@@ -208,6 +208,9 @@ h1{
 
 .picture{
   animation: slide_left 3s;
+  object-fit:cover;
+  max-width: 50vw;
+  min-height: 100%;
 }
 
 .cover_image_mobile{
@@ -635,38 +638,38 @@ h1{
 @keyframes slide1{
   from {opacity: 0;}
     to {opacity: 1;}
-  0%{margin-left:-200%;}
-100%{margin-left:0px;}
+  0%{transform: translate(-1000px,0);}
+100%{transform: translate(0px,0);}
 }
 
 
 @keyframes resume_left{
   from {opacity: 0;}
     to {opacity: 1;}
-    0%{right:1000px;}
-  100%{right:0px;}
+    0%{transform: translate(-1000px,0);}
+100%{transform: translate(0px,0);}
 }
 
 @keyframes resume_right{
   from {opacity: 0;}
     to {opacity: 1;}
-    0%{right:-1000px;}
-  100%{right:0px;}
+    0%{transform: translate(1000px,0);}
+100%{transform: translate(0px,0);}
 }
 
 @keyframes slide_left1{
   from {opacity: 0;}
     to {opacity: 1;}
-  0%{margin-left:200%;}
-100%{margin-left:0px;}
+  0%{transform: translate(1000px,0);}
+100%{transform: translate(0px,0);}
 }
 
 
 @keyframes appear{
   from {opacity: 0;}
     to {opacity: 1;}
-    0%{margin-top:100px;}
-  100%{margin-top:0px;}
+    0%{transform: translate(0,300px);}
+  100%{mtransform: translate(0,0px);}
 }
 
 
@@ -675,10 +678,9 @@ h1{
   100%{transform: translate(0,0px);}
 }
 @keyframes slide_left{
-    0%{margin-left:100vw;}
-  100%{margin-left:0px;}
+  0%{transform: translate(1000px,0);}
+  100%{transform: translate(0px,0);}
 }
-
 
 @keyframes slide_up{
   0%{transform: translate(0,240px);}
@@ -706,7 +708,19 @@ h1{
     background: white;
     
   }
+  .animate4{
+    animation: none;
+  }
+  .animate5{
+    animation: none;
+  }
 
+  .hidden_left{
+    opacity: 1;
+  }
+  .hidden_right{
+    opacity: 1;
+  }
 
 }
 

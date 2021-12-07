@@ -18,11 +18,10 @@ var animateHTML = function() {
 
   function addEventHandlers() {
       window.addEventListener('scroll', checkPosition);
-      window.addEventListener('resize', init);
   }
   
   function checkPosition() {
-      for (var i = 0; i < elems.length; i++) {
+      for (var i = 0; i < elems.length; i++) {  
       var positionFromTop = elems[i].getBoundingClientRect().top;
       if (positionFromTop - windowHeight <= 0) {
       elems[i].className = elems[i].className.replace(
@@ -60,7 +59,7 @@ elems4[i].className = elems4[i].className.replace(
   );
 
 }
-if (((positionFromTop - windowHeight > 1) || (positionFromTop < 0))&& !mediaQuery.maches) {
+if (((positionFromTop - windowHeight > 1) || (positionFromTop < 0))) {
   elems4[i].className = elems4[i].className.replace(
   'animate4',
   'hidden_left'
@@ -77,7 +76,7 @@ for (var i = 0; i < elems5.length; i++) {
     );
   }
   
-  if (((positionFromTop - windowHeight > 1) || (positionFromTop < 0)) && !mediaQuery.maches) {
+  if (((positionFromTop - windowHeight > 1) || (positionFromTop < 0))) {
     elems5[i].className = elems5[i].className.replace(
     'animate5',
     'hidden_right'
