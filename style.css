@@ -255,6 +255,59 @@ h1 {
   margin: 0;
 }
 
+.thecard {
+  position: relative;
+  display: flex;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.8s ease;
+  background: rgba(255, 255, 255, 0);
+}
+
+.thecard:hover {
+  transform: rotateY(180deg);
+}
+
+.thefront {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  color: #6591c4;
+}
+
+.theback {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 98%;
+  backface-visibility: hidden;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 20px;
+  transform: rotateY(180deg);
+}
+
+.theback .blur {
+  filter: blur(5px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+}
+
+.theback p {
+  position: absolute;
+  font-family: sora, sans-serif;
+  font-weight: 100;
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  margin-top: 0%;
+  margin-left: 20px;
+}
+
 .container .heading {
   margin-top: 50px;
   width: 50%;
@@ -285,6 +338,12 @@ h1 {
 }
 
 .container .box .dream img {
+  width: 100%;
+  padding-bottom: 15px;
+  border-radius: 15px;
+}
+
+.container .box .dream .thecard img {
   width: 100%;
   padding-bottom: 15px;
   border-radius: 15px;
@@ -342,6 +401,7 @@ h1 {
   position: relative;
   transition: all 0.25s ease-in-out;
   width: 100%;
+  overflow: hidden;
   display: grid; /* an inner grid */
 }
 
@@ -356,14 +416,20 @@ h1 {
   display: block;
   height: 100%;
   width: 100%;
+  transition: all 0.25s ease-in;
 }
 .tile:hover h4 {
   opacity: 1;
+  z-index: 1;
 }
 
 .tile:hover {
   border-radius: 15px;
   transform: scale(1.02);
+}
+
+.container .tile:hover img {
+  transform: scale(1.2);
 }
 
 /* Resume page */
