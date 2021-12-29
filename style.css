@@ -271,15 +271,18 @@ h1 {
   -webkit-transform: rotateY(180deg);
 }
 
+.safari15 {
+}
+
 .thefront {
   position: relative;
   top: 0;
   left: 0;
   width: 100%;
   border-radius: 15px;
-  -webkit-perspective: 0;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
+  visibility: visible;
   color: #6591c4;
 }
 
@@ -288,10 +291,8 @@ h1 {
   display: flex;
   width: 100%;
   height: 98%;
-  backface-visibility: hidden;
-  -webkit-perspective: 0;
   -webkit-backface-visibility: hidden;
-  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
   color: rgb(255, 255, 255);
   text-align: center;
   border-radius: 20px;
@@ -426,7 +427,7 @@ h1 {
   display: block;
   height: 100%;
   width: 100%;
-  transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in-out;
 }
 .tile:hover h4 {
   opacity: 1;
@@ -435,11 +436,11 @@ h1 {
 
 .tile:hover {
   border-radius: 15px;
-  transform: scale(1.02);
 }
 
 .container .tile:hover img {
   transform: scale(1.2);
+  -webkit-transform: scale(1.2);
 }
 
 /* Resume page */
