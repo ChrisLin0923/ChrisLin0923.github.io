@@ -123,6 +123,8 @@
         <div id="mySidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             <a href="#home">Home</a>
+            <a href="#Steward-Expense">Steward Expense</a>
+            <a href="Service-Scheduler">Service Scheduler</a>
             <a href="#photo">Gallery</a>
             <a href="#contact">About Me</a>
         </div>
@@ -133,7 +135,7 @@
     <section class="wrapper">
          <p class = "cover_text" >Programmer || Photographer</p>
       
-         <p class = "cover_text1">Passionate  lover of photography and film-making. Custom keyboards, desk setup, games, and tech accesorries enthusiast residing in New York. </p> 
+         <p class = "cover_text1">Full-Stack Web Developer crafting responsive, user-friendly applications with modern technologies. Combining technical expertise in React, TypeScript, and Firebase with a passion for visual storytelling through photography in New York.</p> 
    
     
          <!-- Add icon library -->
@@ -142,8 +144,11 @@
 
          <!-- Add font awesome icons -->
         <div class = "browse_insta">
-            <a URL = "https://www.instagram.com/focus.on.fire/"; href="https://www.instagram.com/focus.on.fire/" class="fa fa-instagram"></a>
- 
+            <div class="profile_container">
+                <a URL = "https://www.instagram.com/focus.on.fire/"; href="https://www.instagram.com/focus.on.fire/" class="fa fa-instagram"></a>
+                <a URL = "https://www.linkedin.com/in/chris-lin-47728b258/"; href="https://www.linkedin.com/in/chris-lin-47728b258/" class="fa fa-linkedin"></a>
+            </div>
+            
             <p style=" text-align: center;"; class = "cover_text2"> Browse My Portfolio </p> 
         </div>
     </section>
@@ -155,6 +160,103 @@
  
 </section>
 
+<section id="Steward-Expense" class="project-section">
+    <div class="project-container project-hidden">
+        <h2>Steward Expense Tracker</h2>
+        <div class="project-content project-content-hidden">
+            <div class="project-description">
+                <p>A full-stack expense tracking platform serving 100+ users, allowing budget goal-setting and financial tracking. Built with React, TypeScript, and Firebase, this application features real-time data synchronization and a multiple theme UI options for optimal  and personal viewing.</p>
+                <p>Key features include:</p>
+                <ul>
+                    <li>Budget and savings goal tracking with visual progress indicators</li>
+                    <li>Transaction management with custom tagging system</li>
+                    <li>Category-based expense analysis</li>
+                    <li>Clean, minimal dark interface for reduced eye strain</li>
+                </ul>
+                <a href="https://steward-expense.vercel.app/" target="_blank" class="project-link">View Live Project</a>
+            </div>
+            <div class="project-image">
+                <div class="project-gallery">
+                    <div class="gallery-container">
+                        
+                        <div class="gallery-item">
+                            <img src="img/Steward-home.png" alt="Steward Expense Dashboard">
+                            <div class="gallery-caption">Dashboard with Budget & Savings Trackers</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/Steward-list.png" alt="Steward Expense Transactions">
+                            <div class="gallery-caption">Transaction Management with Custom Tags</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/Steward-Goals.png" alt="Steward Expense Goals">
+                            <div class="gallery-caption">Goal Setting with Progress Visualization</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/Steward-Setting.png" alt="Steward Expense Settings">
+                            <div class="gallery-caption">User Settings & Preferences</div>
+                        </div>
+                    </div>
+                    <div class="gallery-arrow gallery-prev">&#10094;</div>
+                    <div class="gallery-arrow gallery-next">&#10095;</div>
+                    <div class="gallery-nav">
+                        <div class="gallery-dot active"></div>
+                        <div class="gallery-dot"></div>
+                        <div class="gallery-dot"></div>
+                        <div class="gallery-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="Service-Scheduler" class="project-section">
+    <div class="project-container project-hidden">
+        <h2>Service Scheduler</h2>
+        <div class="project-content project-content-hidden">
+            <div class="project-description">
+                <p>A scheduling web application built to automate and streamline church role assignments, reducing manual coordination efforts and eliminating scheduling conflicts.</p>
+                <p>Key features include:</p>
+                <ul>
+                    <li>Intuitive role assignment interface</li>
+                    <li>Conflict detection and resolution</li>
+                    <li>Google Calendar integration</li>
+                    <li>Mobile-responsive design for on-the-go scheduling</li>
+                </ul>
+                <a href="https://scheduler-app-gray.vercel.app/" target="_blank" class="project-link">View Live Project</a>
+            </div>
+            <div class="project-image">
+                <div class="project-gallery">
+                    <div class="gallery-container">
+                        
+                        <div class="gallery-item">
+                            <img src="img/Scheduler main.png" alt="Steward Expense Dashboard">
+                            <div class="gallery-caption">Streamlined Scheduler</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/SchedulerMerge.png" alt="Steward Expense Transactions">
+                            <div class="gallery-caption">Simple Scheduling Interface</div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/Scheduler Phone Merge.png" alt="Steward Expense Goals">
+                            <div class="gallery-caption">Schedule On the Go</div>
+                        </div>
+                        
+                    </div>
+                    <div class="gallery-arrow gallery-prev">&#10094;</div>
+                    <div class="gallery-arrow gallery-next">&#10095;</div>
+                    <div class="gallery-nav">
+                        <div class="gallery-dot active"></div>
+                        <div class="gallery-dot"></div>
+                        <div class="gallery-dot"></div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="photo"> 
     <div class="container">
         <div class="heading">
@@ -164,19 +266,19 @@
         
         <div class="dream">
             
-        <div class="thecard">
-            <img class="hidden thefront"src="img/1.jpg">
-            <div class="theback">
-                <img class="blur"src="img/1.jpg">
-                <p style="margin-top: 30px;"> 
-                    Description: Manhattan street during snowday<br>
-                    Shutter Speed: 1/400s <br>
-                    Focal Length: 50mm <br>
-                    Aperture: f1.2 <br>
-                    ISO: 100 <br>
-                </p>
-        </div>
-        </div>
+            <div class="thecard">
+                <img class="hidden thefront"src="img/1.jpg">
+                <div class="theback">
+                    <img class="blur"src="img/1.jpg">
+                    <p style="margin-top: 30px;"> 
+                        Description: Manhattan street during snowday<br>
+                        Shutter Speed: 1/400s <br>
+                        Focal Length: 50mm <br>
+                        Aperture: f1.2 <br>
+                        ISO: 100 <br>
+                    </p>
+                </div>
+            </div>
 
         <div class="tile">
                 <a href ="Snow_storm2.html">
@@ -185,20 +287,19 @@
                 <h4>Story Behind This Photo</h4>
         </div>
         
-        <div class="thecard">
-        <img class="hidden thefront" src="img/3.jpg">
-        <div class="theback">
-            <img class="blur" src="img/3.jpg">
-            <p>
-            Description: Manhattan alleyway during snowday<br>
-            Shutter Speed: 1/600s <br>
-            Focal Length: 50mm <br>
-            Aperture: f1.2 <br>
-            ISO: 100 <br>
-        </p>
-    </div>
-
-    </div>
+            <div class="thecard">
+                <img class="hidden thefront" src="img/3.jpg">
+                <div class="theback">
+                    <img class="blur" src="img/3.jpg">
+                    <p>
+                    Description: Manhattan alleyway during snowday<br>
+                    Shutter Speed: 1/600s <br>
+                    Focal Length: 50mm <br>
+                    Aperture: f1.2 <br>
+                    ISO: 100 <br>
+                </p>
+            </div>
+            </div>
 
          <div class="tile">
                 <a href ="Snow_storm.html">
@@ -207,7 +308,7 @@
                 <h4>Story Behind This Photo</h4>
             </div>
 
-            <div class="thecard">
+                <div class="thecard">
                     <img  class="hidden thefront" src="img/5.jpg"> 
                     <div class="theback">
 
@@ -238,7 +339,7 @@
                 <h4>Story Behind This Photo</h4>
             </div>
 
-        <div class="thecard">
+            <div class="thecard">
                 <img  class="hidden2 thefront" src="img/8.jpg">
                 <div class="theback">
                     <img  class="blur" src="img/8.jpg">
@@ -258,21 +359,21 @@
              </a>
             <h4>Story Behind This Photo</h4>
         </div>
-        <div class="thecard">
-            <img  class="hidden2 thefront" src="img/10.jpg">
-            <div class="theback">
-                <img  class="blur" src="img/10.jpg">
-                <p style="color: white;">
-                Description: The rooftop parking lot of Skyview <br>
-                Shutter Speed: 1/60s <br>
-                Focal Length: 18mm <br>
-                Aperture: f1.8 <br>
-                ISO: 1600 <br>
-            </p>
+            <div class="thecard">
+                <img  class="hidden2 thefront" src="img/10.jpg">
+                <div class="theback">
+                    <img  class="blur" src="img/10.jpg">
+                    <p style="color: white;">
+                    Description: The rooftop parking lot of Skyview <br>
+                    Shutter Speed: 1/60s <br>
+                    Focal Length: 18mm <br>
+                    Aperture: f1.8 <br>
+                    ISO: 1600 <br>
+                </p>
+            </div>
         </div>
-    </div>
 
-    <div class="thecard">
+        <div class="thecard">
             <img class="hidden2 thefront"  src="img/16.jpg">
             <div class="theback">
                 <img class="blur"  src="img/16.jpg">
@@ -286,7 +387,7 @@
         </div>
     </div>
     
-    <div class="thecard">
+        <div class="thecard">
             <img  class="hidden2 thefront" src="img/17.jpg">
             <div class="theback">
                 <img  class="blur" src="img/17.jpg">
@@ -296,11 +397,11 @@
                 Focal Length: 20mm <br>
                 Aperture: f1.8 <br>
                 ISO: 600 <br>
-            </p>
+                </p>
+            </div>
         </div>
-    </div>
 
-    <div class="thecard">
+        <div class="thecard">
             <img  class="hidden2 thefront" src="img/18.jpg">
             <div class="theback">
                 <img  class="blur" src="img/18.jpg">
@@ -310,27 +411,27 @@
                 Focal Length: 50mm <br>
                 Aperture: f1.2 <br>
                 ISO: 100 <br>
-            </p>
+                </p>
+            </div>
         </div>
-    </div>
 
         </div>
             <div class="dream">
 
-        <div class="thecard">
-            <img class="hidden3 thefront"  src="img/11.jpg">
-            <div class="theback">
-                <img class="blur"  src="img/11.jpg">
-                <p style="color:white">
-                Description: My favorite workspace at home <br>
-                Shutter Speed: 1/60s <br>
-                Focal Length: 24mm <br>
-                Aperture: f1.8 <br>
-                ISO: 100 <br>
-            </p>
-        </div>
+            <div class="thecard">
+                <img class="hidden3 thefront"  src="img/11.jpg">
+                <div class="theback">
+                    <img class="blur"  src="img/11.jpg">
+                    <p style="color:white">
+                    Description: My favorite workspace at home <br>
+                    Shutter Speed: 1/60s <br>
+                    Focal Length: 24mm <br>
+                    Aperture: f1.8 <br>
+                    ISO: 100 <br>
+                </p>
+            </div>
 
-        </div>
+            </div>
 
             <div class="tile">
                 <a href ="desk.html">
@@ -339,19 +440,19 @@
                 <h4>Story Behind This Photo</h4>
             </div>
         
-        <div class="thecard">
-            <img  class="hidden3 thefront" src="img/13.jpg">
-             <div class="theback">
-                <img  class="blur" src="img/13.jpg">
-                <p style="color:white">
-                Description: A street performer in Manhattan <br>
-                Shutter Speed: 1/800s <br>
-                Focal Length: 50mm <br>
-                Aperture: f1.2 <br>
-                ISO: 100 <br>
-            </p>
-        </div>
-    </div>   
+            <div class="thecard">
+                <img  class="hidden3 thefront" src="img/13.jpg">
+                 <div class="theback">
+                    <img  class="blur" src="img/13.jpg">
+                    <p style="color:white">
+                    Description: A street performer in Manhattan <br>
+                    Shutter Speed: 1/800s <br>
+                    Focal Length: 50mm <br>
+                    Aperture: f1.2 <br>
+                    ISO: 100 <br>
+                </p>
+            </div>
+        </div>   
 
         <div class="tile">
             <a href ="Into_The_City.html">
@@ -360,21 +461,21 @@
             <h4>Story Behind This Photo</h4>
         </div>
 
-        <div class="thecard">
-            <img  class="hidden3 thefront" src="img/15.jpg"> 
-            <div class="theback">
-                <img  class="blur" src="img/15.jpg"> 
-                <p>
-                Description: A long exposure shot on Roosevelt Island <br>
-                Shutter Speed: 1/800s <br>
-                Focal Length: 50mm <br>
-                Aperture: f1.2 <br>
-                ISO: 100 <br>
-            </p>
-        </div>
-    </div>   
+            <div class="thecard">
+                <img  class="hidden3 thefront" src="img/15.jpg"> 
+                <div class="theback">
+                    <img  class="blur" src="img/15.jpg"> 
+                    <p>
+                    Description: A long exposure shot on Roosevelt Island <br>
+                    Shutter Speed: 1/800s <br>
+                    Focal Length: 50mm <br>
+                    Aperture: f1.2 <br>
+                    ISO: 100 <br>
+                </p>
+            </div>
+        </div>   
 
-    <div class="thecard">
+        <div class="thecard">
             <img  class="hidden3 thefront" src="img/19.jpg">
             <div class="theback">
                 <img  class="blur" src="img/19.jpg">
@@ -400,7 +501,7 @@
                     <div class="imgBx">
                         <img src="img/cover_profile.png">
                     </div>
-                    <h2> Chris Lin <br> <span> Programmer | Photographer </span> </h2>
+                    <h2> Dahui Lin <br> <span> Software Developer | Photographer </span> </h2>
                 </div>
 
                 <div class="contactInfo"> 
@@ -412,11 +513,15 @@
                         </li>
                         <li>
                             <span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i> </span>
-                            <span class="text">chrislinflhs@gmail.com</span>
+                            <span class="text">dahui.lin1105@gmail.com</span>
                         </li>
                         <li>
-                            <span class="icon"><i class="fa fa-instagram" aria-hidden="true"></i> </span>
-                            <span class="text">@focus.on.fire</span>
+                            <span class="icon"><i class="fa fa-github" aria-hidden="true"></i> </span>
+                            <span class="text">github.com/ChrisLin0923</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i> </span>
+                            <span class="text">linkedin.com/in/chris-lin-47728b258</span>
                         </li>
                         <li>
                             <span class="icon"> <i class="fa fa-map-marker" aria-hidden="true"></i></span>
@@ -429,17 +534,29 @@
                     <h3 class="title_contact"> Education </h3>
                     <ul>
                         <li>
-                            <h5>2020 - 2022</h5>
-                            <h4>Pursuing Bachelor Degree in Computer Science</h4>
-                            <h4>Queens College</h4>
-                        </li>
-
-                        <li>
-                            <h5>2016 - 2020</h5>
-                            <h4>High School Diploma, Elective in Computer Science</h4>
-                            <h4>Francis Lewis High School</h4>
+                            <h5>2020 - 2024</h5>
+                            <h4>Bachelor of Arts in Computer Science</h4>
+                            <h4>Queens College of the City University of New York</h4>
                         </li>
                     </ul>
+                </div>
+
+                <div class="skills-left"> 
+                    <h3 class="title_contact"> Professional Skills </h3>
+                    <div class="skill-category-left">
+                        <h4>Languages:</h4>
+                        <p>Java, C++, JavaScript, TypeScript, SQL, React, HTML, CSS</p>
+                    </div>
+                    
+                    <div class="skill-category-left">
+                        <h4>Tools & DevOps:</h4>
+                        <p>MongoDB, Firebase, Git, Insomnia, Vercel</p>
+                    </div>
+                    
+                    <div class="skill-category-left">
+                        <h4>Frameworks/Libraries:</h4>
+                        <p>Spring, Spring Boot, ReCharts</p>
+                    </div>
                 </div>
 
                 <div class="language"> 
@@ -461,7 +578,7 @@
             <div class="right_Side hidden_right">
                 <div class="about">
                     <h2 class = "title1"> Profile </h2>
-                    <p> Passionate College Sophomore with experience in programming, and have developed skills to work in a team. Possessing the ability to clearly articulate logical ideas and creative solutions. Motivated to actively overcome challenges and facilitate my knowledge in the field. </p>
+                    <p> Software Developer with a Bachelor's degree in Computer Science and experience in full-stack web development. Skilled in creating responsive, user-friendly applications with modern technologies. Passionate about photography and technology with strong problem-solving abilities and a commitment to continuous learning. </p>
                 </div>
 
                 <div class="about">
@@ -469,79 +586,128 @@
 
                     <div class="box">
                         <div class="year">
-                            <h5> 2021 - 2022</h5>
-                            <h5> Internship for Web development <br>HKS Wholesale</h5>
+                            <h5> 11/2024 - Present</h5>
+                            <h5> Grace Christian Alliance Church</h5>
                         </div>
                         <div class="text">
-                        <h4> Frontend Developer </h4>
-                        <p>Learn frontend concepts and languages (CSS, HTML, JavaScript), contributed to various projects while learning (Shopify, Bluehost). Built and maintain website using Magento.</p>
+                        <h4> Head of Technician Department </h4>
+                        <ul class="resume-list">
+                            <li><p><strong>Troubleshoot</strong> camera, PC, audio, mixer, and network equipment to ensure seamless operation.</p></li>
+                            <li><p><strong>Document</strong> and <strong>design</strong> system signal flows to assist team members and new hires in understanding and troubleshooting existing systems.</p></li>
+                        </ul>
                    </div>
                </div>
                     
                 <div class="box">
                          <div class="year">
-                             <h5> 2020 - 2021</h5>
-                             <h5> Grace Chinese Alliance <br>Church Ministry</h5>
+                             <h5> 10/2023 - Present</h5>
+                             <h5> GCAC Afterschool</h5>
                          </div>
                          <div class="text">
-                         <h4> Intro to Java Teacher </h4>
-                         <p>Teaching APCS A curriculum via zoom meetings every sunday, designing lesson plans, communicating with staff and students on the course.</p>
+                         <h4> Teacher </h4>
+                         <ul class="resume-list">
+                            <li><p><strong>Conducted</strong> hands-on lessons in camera operation, Lightroom Classic, and DaVinci Resolve 19 for 30+ students, leading to a <strong>50%</strong> improvement in student engagement and project completion.</p></li>
+                         </ul>
                     </div>
                 </div>
 
                     <div class="box">
                         <div class="year">
-                            <h5> Summer of 2019</h5>
-                            <h5> Agape Summer Camp</h5>
+                            <h5> 06/2020 - 08/2021</h5>
+                            <h5> HKS WholeSale (Hakam Shop)</h5>
                         </div>
                         <div class="text">
-                        <h4>Teacher of 4th and 5th grade </h4>
-                        <p>Assist students with Math, English, Science and Social study classes, prepare material, and design lesson plans. </p>
+                        <h4>Frontend Developer </h4>
+                        <ul class="resume-list">
+                            <li><p><strong>Contributed</strong> in a two-person team to design and maintain websites for 3,000+ products, improving load times by <strong>20%</strong> with optimized HTML, CSS, and JavaScript structures.</p></li>
+                            <li><p><strong>Revamped</strong> the JHD Construction website on Wix, improving brand visibility and optimizing the platform for seamless client updates and engagement.</p></li>
+                        </ul>
+                   </div>
+                </div>
+                </div>
+                
+                <div class="about">
+                    <h2 class = "title1"> Projects  </h2>
+
+                    <div class="box">
+                        <div class="year">
+                            <h5> 12/2024 - 02/2025</h5>
+                            <h5> <a href="https://scheduler-app-gray.vercel.app/" target="_blank" class="year-link">Service Scheduler</a></h5>
+                        </div>
+                        <div class="text">
+                        <h4> React, TypeScript, HTML, CSS, Firebase, Google API, Vercel </h4>
+                        <ul class="resume-list">
+                            <li><p><strong>Developed</strong> a scheduling web application to automate and streamline church role assignments, reducing manual coordination efforts.</p></li>
+                            <li><p><strong>Eliminated</strong> scheduling conflicts by <strong>100%</strong>, with over 50 active users, fostering a more organized and engaged community.</p></li>
+                        </ul>
+                   </div>
+               </div>
+                    
+                <div class="box">
+                         <div class="year">
+                             <h5> 10/2024 - 12/2024</h5>
+                             <h5> <a href="https://steward-expense.vercel.app/" target="_blank" class="year-link">Steward Expense Tracking Web App</a></h5>
+                         </div>
+                         <div class="text">
+                         <h4> React, TypeScript, Firebase, Recharts, Vite, CSS </h4>
+                         <ul class="resume-list">
+                            <li><p><strong>Developed</strong> a full-stack expense tracking platform serving 100+ users, allowing budget goal-setting and financial tracking.</p></li>
+                            <li><p><strong>Implemented</strong> real-time data synchronization with Firebase, <strong>reducing</strong> expense entry time by 10%.</p></li>
+                            <li><p><strong>Designed</strong> a mobile-first, interactive UI with animated modals, improving user engagement.</p></li>
+                         </ul>
+                    </div>
+                </div>
+
+                    <div class="box">
+                        <div class="year">
+                            <h5> 05/2024</h5>
+                            <h5> <a href="https://github.com/ChrisLin0923/Bible-GoogleDrive-API" target="_blank" class="year-link">Bible and Google Drive API Webserver</a></h5>
+                        </div>
+                        <div class="text">
+                        <h4> HTML, CSS, JavaScript, Bible API, Google Drive API, Session Integrity Encryption </h4>
+                        <ul class="resume-list">
+                            <li><p><strong>Developed</strong> a web server for clients to retrieve Bible verses and save them to Google Drive, streamlining data access.</p></li>
+                            <li><p><strong>Implemented</strong> secure authentication and data transfer, enhancing user privacy and efficiency.</p></li>
+                        </ul>
                    </div>
                 </div>
 
                 <div class="box">
                     <div class="year">
-                        <h5> Summer of 2016-2018</h5>
-                        <h5> Boon Church Summer <br>Camp</h5>
+                        <h5> 08/2021 - 10/2021</h5>
+                        <h5> <a href="https://chrislin0923.github.io/" target="_blank" class="year-link">Photo Gallery Website</a></h5>
                     </div>
                     <div class="text">
-                    <h4> Office Assistant/Teacher Assistant </h4>
-                    <p>Teach and take care of various ages of children ranging for 4 through 13. Involved in the ogranization of administration office of the camp. Assited teachers in maintaining classroom order.</p>
+                    <h4> HTML, CSS, JavaScript </h4>
+                    <ul class="resume-list">
+                        <li><p><strong>Developed</strong> a responsive portfolio website to showcase 30+ <strong>high-resolution photographs</strong>, integrating interactive animations for an engaging user experience.</p></li>
+                        <li><p><strong>Optimized</strong> image compression and asset loading, <strong>reducing</strong> page load times by <strong>40%</strong>, ensuring smooth performance across all devices.</p></li>
+                    </ul>
                 </div>
                </div>
-
                 </div>
                 
                 <div class="about skills">
-                    <h2 class ="title1">Professional Skills</h2>
+                    <h2 class ="title1">Technical Proficiency</h2>
                     
                     <div class="box">
                         <h4> Java </h4>
                         <div class="percent"> 
                             <div class ="hidden" style="width: 90%;"></div>
                         </div>
-                    
-                    </div>
-
-                    <div class="box">
-                        <h4> C++ </h4>
-                        <div class="percent"> 
-                            <div class ="hidden" style="width: 75%;"></div>
-                        </div>
                     </div>
                     
                     <div class="box">
-                        <h4> HTML </h4>
+                        <h4> JavaScript/TypeScript </h4>
                         <div class="percent"> 
                             <div class ="hidden" style="width: 80%;"></div>
                         </div>
                     </div>
 
                     <div class="box">
-                        <h4> CSS </h4>
-                        <div class="percent">
-                            <div class ="hidden" style="width: 80%;"></div> 
+                        <h4> HTML/CSS </h4>
+                        <div class="percent"> 
+                            <div class ="hidden" style="width: 90%;"></div> 
                         </div>
                     </div>
 
@@ -551,20 +717,13 @@
                             <div class ="hidden" style="width: 95%;"></div> 
                         </div>
                     </div>
-
-                    <div class="box">
-                        <h4> Photo/Video Editing </h4>
-                        <div class="percent"> 
-                            <div class ="hidden" style="width: 95%;"></div> 
-                        </div>
-                    </div>
                 </div>
 
                 <div class="about interest">
                     <h2 class ="title1">Interests</h2>
                     <ul> 
-                        <li> <i class="fa fa-gamepad" aria-hidden="true"></i>
-                        Gaming
+                        <li> <i class="fa fa-code" aria-hidden="true"></i>
+                        Web Development
                         </li>
                         
                         <li> <i class="fa fa-camera-retro" aria-hidden="true"></i> 
@@ -581,7 +740,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="script.js"></script>
-<body onload="animateHTML().init();"></body>
 </body>
 
 </html>
