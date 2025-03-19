@@ -69,21 +69,15 @@ var animateHTML = function () {
 			var positionFromTop = elems[i].getBoundingClientRect().top;
 			var positionFromBottom = elems[i].getBoundingClientRect().bottom;
 
-			// Only animate if element is entering the viewport
-			if (positionFromTop - windowHeight <= 0 && positionFromBottom > 0) {
+			// Only animate if element is entering the viewport and hasn't been animated yet
+			if (
+				positionFromTop - windowHeight <= 0 &&
+				positionFromBottom > 0 &&
+				elems[i].className.includes("hidden")
+			) {
 				elems[i].className = elems[i].className.replace(
 					"hidden",
 					"animate"
-				);
-			}
-			// Only reset if element has completely left the viewport
-			else if (
-				positionFromBottom <= 0 ||
-				positionFromTop >= windowHeight
-			) {
-				elems[i].className = elems[i].className.replace(
-					"animate",
-					"hidden"
 				);
 			}
 		}
@@ -92,18 +86,14 @@ var animateHTML = function () {
 			var positionFromTop = elems2[i].getBoundingClientRect().top;
 			var positionFromBottom = elems2[i].getBoundingClientRect().bottom;
 
-			if (positionFromTop - windowHeight <= 0 && positionFromBottom > 0) {
+			if (
+				positionFromTop - windowHeight <= 0 &&
+				positionFromBottom > 0 &&
+				elems2[i].className.includes("hidden2")
+			) {
 				elems2[i].className = elems2[i].className.replace(
 					"hidden2",
 					"animate2"
-				);
-			} else if (
-				positionFromBottom <= 0 ||
-				positionFromTop >= windowHeight
-			) {
-				elems2[i].className = elems2[i].className.replace(
-					"animate2",
-					"hidden2"
 				);
 			}
 		}
@@ -112,18 +102,14 @@ var animateHTML = function () {
 			var positionFromTop = elems3[i].getBoundingClientRect().top;
 			var positionFromBottom = elems3[i].getBoundingClientRect().bottom;
 
-			if (positionFromTop - windowHeight <= 0 && positionFromBottom > 0) {
+			if (
+				positionFromTop - windowHeight <= 0 &&
+				positionFromBottom > 0 &&
+				elems3[i].className.includes("hidden3")
+			) {
 				elems3[i].className = elems3[i].className.replace(
 					"hidden3",
 					"animate3"
-				);
-			} else if (
-				positionFromBottom <= 0 ||
-				positionFromTop >= windowHeight
-			) {
-				elems3[i].className = elems3[i].className.replace(
-					"animate3",
-					"hidden3"
 				);
 			}
 		}
@@ -132,18 +118,14 @@ var animateHTML = function () {
 			var positionFromTop = elems4[i].getBoundingClientRect().top;
 			var positionFromBottom = elems4[i].getBoundingClientRect().bottom;
 
-			if (positionFromTop - windowHeight <= 0 && positionFromBottom > 0) {
+			if (
+				positionFromTop - windowHeight <= 0 &&
+				positionFromBottom > 0 &&
+				elems4[i].className.includes("hidden_left")
+			) {
 				elems4[i].className = elems4[i].className.replace(
 					"hidden_left",
 					"animate4"
-				);
-			} else if (
-				positionFromBottom <= 0 ||
-				positionFromTop >= windowHeight
-			) {
-				elems4[i].className = elems4[i].className.replace(
-					"animate4",
-					"hidden_left"
 				);
 			}
 		}
@@ -152,18 +134,14 @@ var animateHTML = function () {
 			var positionFromTop = elems5[i].getBoundingClientRect().top;
 			var positionFromBottom = elems5[i].getBoundingClientRect().bottom;
 
-			if (positionFromTop - windowHeight <= 0 && positionFromBottom > 0) {
+			if (
+				positionFromTop - windowHeight <= 0 &&
+				positionFromBottom > 0 &&
+				elems5[i].className.includes("hidden_right")
+			) {
 				elems5[i].className = elems5[i].className.replace(
 					"hidden_right",
 					"animate5"
-				);
-			} else if (
-				positionFromBottom <= 0 ||
-				positionFromTop >= windowHeight
-			) {
-				elems5[i].className = elems5[i].className.replace(
-					"animate5",
-					"hidden_right"
 				);
 			}
 		}
@@ -172,9 +150,7 @@ var animateHTML = function () {
 	function processProjectAnimations() {
 		// Store elements that need animation in arrays
 		const sectionsToAnimate = [];
-		const sectionsToReset = [];
 		const contentsToAnimate = [];
-		const contentsToReset = [];
 
 		// Check project sections
 		for (var i = 0; i < projectSections.length; i++) {
@@ -192,15 +168,6 @@ var animateHTML = function () {
 				!isVisible
 			) {
 				sectionsToAnimate.push(projectSections[i]);
-			}
-			// Check if element has left viewport completely and is currently animated
-			// Add a larger buffer to prevent flashing during fast scrolling
-			else if (
-				(positionFromBottom <= -100 ||
-					positionFromTop >= windowHeight + 100) &&
-				isVisible
-			) {
-				sectionsToReset.push(projectSections[i]);
 			}
 		}
 
@@ -221,15 +188,6 @@ var animateHTML = function () {
 				isHidden
 			) {
 				contentsToAnimate.push(projectContents[i]);
-			}
-			// Check if element has left viewport completely and is currently visible
-			// Add a larger buffer to prevent flashing during fast scrolling
-			else if (
-				(positionFromBottom <= -100 ||
-					positionFromTop >= windowHeight + 100) &&
-				!isHidden
-			) {
-				contentsToReset.push(projectContents[i]);
 			}
 		}
 
@@ -252,52 +210,17 @@ var animateHTML = function () {
 				image.classList.add("animate-right");
 			}
 
-			// Animate list items with a staggered delay
+			// Animate list items with a staggered delay - speed up the delays
 			if (listItems.length > 0) {
 				listItems.forEach((item, idx) => {
 					setTimeout(() => {
 						item.classList.add("animate-item");
-					}, 800 + idx * 150); // Increased delay to ensure main animations complete first
+					}, 600 + idx * 100); // Reduced from 800 + idx * 150
 				});
 			}
 
 			content.classList.remove("project-content-hidden");
 		});
-
-		// Reset animations with a delay
-		if (sectionsToReset.length > 0 || contentsToReset.length > 0) {
-			setTimeout(() => {
-				sectionsToReset.forEach((section) => {
-					section.classList.remove("project-animate");
-					section.classList.add("project-hidden");
-				});
-
-				contentsToReset.forEach((content) => {
-					const description = content.querySelector(
-						".project-description"
-					);
-					const image = content.querySelector(".project-image");
-					const listItems = content.querySelectorAll("ul li");
-
-					if (description) {
-						description.classList.remove("animate-left");
-					}
-
-					if (image) {
-						image.classList.remove("animate-right");
-					}
-
-					// Reset list item animations
-					if (listItems.length > 0) {
-						listItems.forEach((item) => {
-							item.classList.remove("animate-item");
-						});
-					}
-
-					content.classList.add("project-content-hidden");
-				});
-			}, 500); // Increased delay for smoother transitions
-		}
 	}
 
 	// Function to improve card flip hover stability
@@ -348,8 +271,6 @@ var animateHTML = function () {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-	console.log("Card flip script initialized");
-
 	// Initialize the animation script
 	if (typeof animateHTML === "function") {
 		animateHTML().init();
@@ -390,6 +311,25 @@ document.addEventListener("DOMContentLoaded", function () {
 			container.classList.toggle("card-flipped");
 		});
 	});
+
+	// Add this to your script.js to lazy load images
+	const images = document.querySelectorAll("img[data-src]");
+
+	const imgObserver = new IntersectionObserver((entries, observer) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				const img = entry.target;
+				img.src = img.dataset.src;
+				img.onload = () => {
+					img.removeAttribute("data-src");
+					img.classList.add("img-loaded");
+				};
+				observer.unobserve(img);
+			}
+		});
+	});
+
+	images.forEach((img) => imgObserver.observe(img));
 });
 
 // Function to initialize project image gallery
@@ -542,3 +482,28 @@ function closeNav() {
 	document.getElementById("mySidebar").style.width = "0";
 	document.getElementById("main").style.marginLeft = "0";
 }
+
+// Better smooth scrolling with easing
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+	anchor.addEventListener("click", function (e) {
+		e.preventDefault();
+
+		const targetId = this.getAttribute("href");
+		const targetElement = document.querySelector(targetId);
+
+		if (targetElement) {
+			const headerOffset = 60; // Adjust based on your fixed header height
+			const elementPosition = targetElement.getBoundingClientRect().top;
+			const offsetPosition =
+				elementPosition + window.pageYOffset - headerOffset;
+
+			window.scrollTo({
+				top: offsetPosition,
+				behavior: "smooth",
+			});
+
+			// Update URL without scrolling
+			history.pushState(null, null, targetId);
+		}
+	});
+});
