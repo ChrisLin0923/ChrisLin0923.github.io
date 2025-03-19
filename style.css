@@ -288,6 +288,12 @@ h1 {
 	text-align: center;
 }
 
+.project-container .techStack {
+	font-style: italic !important;
+	color: grey;
+	font-size: medium;
+}
+
 .project-content {
 	display: flex;
 	flex-direction: row;
